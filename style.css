@@ -1,0 +1,235 @@
+body {
+    /* Nouveau : Fond sombre pour un look professionnel */
+    background: #1e1e2f; 
+    color: #f1f1f1; /* Texte clair */
+    font-family: 'Roboto', sans-serif; 
+    margin: 0; 
+    padding: 0;
+    line-height: 1.6; /* Meilleure lisibilité */
+}
+
+/* ---------------------------------- */
+/* Entête et Navigation      */
+/* ---------------------------------- */
+
+.header-fixed {
+    /* Nouveau : Couleur d'accentuation plus profonde */
+    background: rgba(0, 123, 255, 0.9); 
+    /* Effet Glassmorphism subtil pour l'entête */
+    backdrop-filter: blur(5px);
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    color: #fff; 
+    padding: 15px 0; /* Un peu plus d'espace */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    z-index: 1000;
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px; /* Plus d'espace entre les liens */
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Pour l'effet de survol */
+}
+
+nav ul li a:hover {
+    color: #a4c9ff; /* Couleur de survol plus douce */
+    border-bottom: 2px solid #fff; /* Ligne de survol */
+}
+
+.logo {
+    font-weight: 700; 
+    font-size: 1.5em; /* Logo plus grand */
+    letter-spacing: 1px;
+}
+
+/* ---------------------------------- */
+/* Sections             */
+/* ---------------------------------- */
+
+.section {
+    max-width: 1000px; 
+    margin: 120px auto 60px; /* Marge supérieure ajustée à cause de l'entête fixe */
+    padding: 40px; /* Plus de padding pour respirer */
+    text-align: center;
+    background: #2a2a44; /* Fond de section léger */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2 {
+    color: #00bcd4; /* Nouvelle couleur d'accentuation (Cyan) */
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #d1d1e0;
+}
+
+/* ---------------------------------- */
+/* Boutons              */
+/* ---------------------------------- */
+
+.btn-primary {
+    display: inline-block; 
+    background: linear-gradient(90deg, #007BFF 0%, #00bcd4 100%); /* Dégradé */
+    color: #fff; 
+    padding: 12px 30px; 
+    border-radius: 50px; /* Bouton arrondi */
+    text-decoration: none; 
+    font-weight: 500;
+    transition: all 0.4s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3 0%, #00a0b3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.6);
+}
+
+/* ---------------------------------- */
+/* Cartes              */
+/* ---------------------------------- */
+
+.cards {
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; /* Plus de séparation */
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    /* Effet Glassmorphism */
+    background: rgba(42, 42, 68, 0.7); /* Fond semi-transparent */
+    backdrop-filter: blur(8px); /* Flou d'arrière-plan */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure subtile */
+    
+    padding: 25px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+}
+
+.card h3 {
+    color: #00bcd4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.3); /* Ombre de couleur au survol */
+}
+
+/* ---------------------------------- */
+/* Compétences            */
+/* ---------------------------------- */
+
+.skills {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    padding: 0; 
+    list-style: none;
+    margin-top: 20px;
+}
+
+.skills li {
+    background: #3a3a5a; /* Fond des tags de compétence */
+    color: #a4c9ff;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 400;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.skills li:hover {
+    background: #00bcd4;
+    color: #1e1e2f;
+    transform: scale(1.05);
+}
+
+/* ---------------------------------- */
+/* Formulaire            */
+/* ---------------------------------- */
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form input, 
+form textarea {
+    width: 100%; 
+    margin-bottom: 15px; 
+    padding: 15px; 
+    border: 1px solid #444; 
+    border-radius: 8px;
+    background: #3a3a5a; /* Fond des champs de formulaire */
+    color: #f1f1f1;
+    font-size: 1em;
+    box-sizing: border-box; /* S'assurer que le padding ne fait pas déborder */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, 
+form textarea:focus {
+    border-color: #00bcd4;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ---------------------------------- */
+/* Pied de page         */
+/* ---------------------------------- */
+
+footer {
+    text-align: center; 
+    padding: 30px; 
+    background: #141423; /* Fond sombre pour le footer */
+    border-top: 1px solid #333; 
+    margin-top: 60px;
+    color: #aaa;
+}
+
